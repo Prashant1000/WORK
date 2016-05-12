@@ -1,0 +1,33 @@
+#include <QApplication>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QString>
+#include <exit.h>
+
+
+
+void my_handler(QApplication *, QLineEdit *)
+
+
+void lineEdit::my_handler()
+{
+    QString text = linedit->text();
+    if ( text == "exit" )
+    {
+	this->close();
+    }
+}
+
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+
+    lineEdit *l = new lineEdit;
+    l->show(); 
+    return app.exec();
+}
+
+
